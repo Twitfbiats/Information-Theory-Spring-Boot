@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html>
+<head>
+<link rel="stylesheet" href="bootstrap.css">
+<style type="text/css">
+	input:invalid 
+	{
+		background-color: ivory;
+		border: none;
+		outline: 2px solid red;
+		border-radius: 5px;
+	}
+</style>
+</head>
+<body>
+<table class="table table-hover table-dark" id="main">
+  <caption>Matrix</caption>
+  <thead>
+    <tr>
+      <th scope="col">p(X,Y)</th>
+	  <th scope="col">X1</th>
+	  <th scope="col">X2</th>
+	  <th scope="col">X3</th>
+	  <th scope="col">p(Y)</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th scope="row">Y1</th>
+      <td><input id="y1x1" type="text" value="0.0625"></td>
+      <td><input id="y1x2" type="text" value="0.375"></td>
+      <td><input id="y1x3" type="text" value="0.0625"></td>
+	  <td><input id="y1x4" type="text" value="0.5"></td>
+    </tr>
+    <tr>
+      <th scope="row">Y2</th>
+      <td><input id="y2x1" type="text" value="0.0625"></td>
+      <td><input id="y2x2" type="text" value="0.1875"></td>
+      <td><input id="y2x3" type="text" value="0"></td>
+	  <td><input id="y2x4" type="text" value="0.25"></td>
+    </tr>
+    <tr>
+      <th scope="row">Y3</th>
+      <td><input id="y3x1" type="text" value="0"></td>
+      <td><input id="y3x2" type="text" value="0.1875"></td>
+      <td><input id="y3x3" type="text" value="0.0625"></td>
+	  <td><input id="y3x4" type="text" value="0.25"></td>
+    </tr>
+	<tr>
+      <th scope="row">p(X)</th>
+      <td><input id="y4x1" type="text" value="0.125"></td>
+      <td><input id="y4x2" type="text" value="0.75"></td>
+      <td><input id="y4x3" type="text" value="0.125"></td>
+	  <td><input id="y4x4" type="text"></td>
+    </tr>
+ </tbody>
+</table>
+
+<div class="row">
+	<label class="col-md-1">Enter m: </label><input class="col-md-1" type="text" id="m">
+	<label class="col-md-1">Enter n: </label><input class="col-md-1" type="text" id="n">
+	<button type="button" class="btn btn-dark" id="click-me">Generate Table</button>
+	<div class="row"><div class="col-md-1"></div><button type="button" class="btn btn-dark" id="calculate">Calculate Entropy</button></div>
+</div>
+<br>
+<br>
+<table class="table table-striped table-hover table-dark" id="entropy">
+  <caption>Calculator</caption>
+  <thead>
+    <tr>
+      <th scope="col">key</th>
+	  <th scope="col">value</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th scope="row">H(X)</th>
+      <td id="hx"></td>
+    </tr>
+    <tr>
+      <th scope="row">H(Y)</th>
+      <td id="hy"></td>
+    </tr>
+	<tr>
+      <th scope="row">H(Y|X)</th>
+      <td id="hykx"></td>
+    </tr>
+	<tr>
+      <th scope="row">H(X|Y)</th>
+      <td id="hxky"></td>
+    </tr>
+	<tr>
+      <th scope="row">H(X,Y)</th>
+      <td id="hxy"></td>
+    </tr>
+	<tr>
+      <th scope="row">H(Y) - H(Y|X)</th>
+      <td id="hy-hykx"></td>
+    </tr>
+	<tr>
+      <th scope="row">I(X,Y)</th>
+      <td id="ixy"></td>
+    </tr>
+	<tr>
+      <th scope="row">D(P(x)||P(y))</th>
+      <td id="dpxpy"></td>
+    </tr>
+	<tr>
+      <th scope="row">D(P(y)||P(x))</th>
+      <td id="dpypx"></td>
+    </tr>
+ </tbody>
+</table>
+
+<script src="jquery-3.7.0.min.js"></script>
+<script src="bootstrap.js"></script>
+<script src="information_theory.js"></script>
+</body>
+</html>
