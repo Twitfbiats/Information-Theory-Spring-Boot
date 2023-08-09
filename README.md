@@ -19,7 +19,7 @@ You have a text and you need to encode it using Huffman and Shannon Fano encodin
 |HTML          |Front end|
 |CSS          |Front end|Bootstrap
 
-# Prequisites
+# Prerequisites
 
 Since the project was built with Spring Boot 3.1.1 we will need:
 
