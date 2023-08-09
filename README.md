@@ -31,8 +31,12 @@ You can use older java version but you need to switch Spring Boot version.
 clone the project to your local machine:
 
     git clone https://github.com/Twitfbiats/Information-Theory-Spring-Boot.git
-Go to project directory and  run maven command using maven wrapper:
+Go to project directory and  run maven command using maven wrapper, running 
+the first tỉme may take a while to download required libraries:
 
     ./mvnw spring-boot:run
+If the browser isn't opened automatically, go to:
+
+    http://localhost
     
 # Demo
