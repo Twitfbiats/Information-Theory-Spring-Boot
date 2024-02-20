@@ -40,3 +40,8 @@ If the browser isn't opened automatically, go to:
     http://localhost
     
 # Demo
+[![Encoding][encoding]](preview/encoding.gif)
+[![Entropy][entropy]](preview/entropy.gif)
+
+[encoding]: preview/encoding.gif
+[entropy]: preview/entropy.gif
